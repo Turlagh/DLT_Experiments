@@ -9,6 +9,7 @@ COPY blockchain.py .
 
 # Install Flask
 RUN pip install Flask
+RUN pip install requests
 
 # Expose port 5000 to allow external connections
 EXPOSE 5000
