@@ -6,29 +6,36 @@ services:
     ports:
       - "5001:5000"
     networks:
-      - blockchain_network
+      - DLT
 
   node2:
     build: ./node
     ports:
       - "5002:5000"
     networks:
-      - blockchain_network
+      - DLT
 
   node3:
     build: ./node
     ports:
       - "5003:5000"
     networks:
-      - blockchain_network
+      - DLT
 
   node4:
     build: ./node
     ports:
       - "5004:5000"
     networks:
-      - blockchain_network
+      - DLT
+
+  node5:
+    build: ./node
+    ports:
+      - "5005:5000"
+    networks:
+      - DLT
 
 networks:
-  blockchain_network:
+  DLT:
     driver: bridge
